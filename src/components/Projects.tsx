@@ -4,7 +4,7 @@ import { BiRightArrowCircle } from "react-icons/bi";
 
 export default function Projects() {
   return (
-    <div className="grid place-items-center text-white italic border-b bg-gray-900">
+    <div id="projects" className="grid place-items-center text-white italic border-b bg-gray-900">
       <h1 className="text-4xl font-bold mt-8">Proyectos</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-8">
         {/* Proyecto 1 */}

@@ -1,1 +1,4 @@
 @import "tailwindcss";
+#navFoto:hover{
+    border: 1px solid #000;
+}

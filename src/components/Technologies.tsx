@@ -68,7 +68,7 @@ const tecnologias: Itecnologia[] = [
 
 export default function Technologies() {
   return (
-    <div className="grid place-items-center text-white italic container mx-auto">
+    <div className="grid place-items-center text-white italic container mx-auto" id="technologies" >
       <h1 className="text-4xl font-bold mt-8">Tecnologías</h1>
       <div className="text-white w-full my-8">
         <div className="mx-auto grid md:grid-cols-4 md:gap-8">

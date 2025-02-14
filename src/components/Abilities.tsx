@@ -45,7 +45,7 @@ export default function Abilities(){
     }
   };
     return(
-      <section className="grid grid-cols-1 md:grid-cols-2 gap-8 p-8 border-t bg-gray-900 text-white italic">
+      <section id="skills" className="grid grid-cols-1 md:grid-cols-2 gap-8 p-8 border-t bg-gray-900 text-white italic">
       {/* Habilidades */}
       <div>
         <h2 className="text-3xl font-bold mb-5 text-center mt-4">Habilidades</h2>
@@ -60,7 +60,7 @@ export default function Abilities(){
       </div>
 
       {/* Formulario de contacto */}
-      <div className="bg-gray-800 p-0 md:p-6 rounded-lg shadow-lg">
+      <div className="bg-gray-800 p-0 md:p-6 rounded-lg shadow-lg" id="contact">
         <h2 className="text-3xl font-bold mb-4 text-center mt-8 md:mt-0">Contáctame</h2>
         <Formik initialValues={initialValues} validationSchema={validationSchema} onSubmit={sendEmail}>
       {({ isSubmitting }) => (
