@@ -1,5 +1,5 @@
 import { Typewriter } from "react-simple-typewriter";
-import foto from "../assets/1651616086895.jpg";
+import foto from "../assets/1651616086895.jpeg";
 
 export default function HeroBanner(){
     return(
