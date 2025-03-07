@@ -6,7 +6,7 @@ export default function HeroBanner(){
         <div id="home" className="flex flex-col gap-2.5 justify-center items-center ">
         <h1 className="text-5xl font-bold text-white my-7">Conrado Llanos</h1>
         
-          <img src={foto} style={{borderRadius:'50%'}} className="h-64 shadow-orange-600 shadow-2xl" alt="" />
+          <img src={foto} style={{borderRadius:'50%'}} className="h-64 shadow-purple-100 shadow-2xl" alt="" />
           <h1 className="italic text-3xl font-bold text-white my-4">
           <Typewriter
             words={[ "Web Developer", "Backend Developer", "Frontend Developer" ]}

@@ -1,4 +1,6 @@
 @import "tailwindcss";
+/* @import "@fontsource/oswald"; */
 body{
   background-color: #101010;
+  /* font-family: "AlternateGotNo3D, sans-serif" */
 }

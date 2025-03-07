@@ -1,5 +1,5 @@
 import { useState } from "react";
-import foto from "../assets/1651616086895.jpg";
+import foto from "../assets/1651616086895.jpeg";
 
 export default function MobileNavBar() {
   const [isOpen, setIsOpen] = useState(false);
