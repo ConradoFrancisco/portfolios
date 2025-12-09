@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 interface Itecnologia {
   id: number;
   nombre: string;
@@ -9,91 +11,101 @@ const tecnologias: Itecnologia[] = [
   {
     id: 1,
     nombre: "React",
-    imagen:
-      "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
-    descripcion:
-      "Es lo que mas uso hoy en dia, me gusta mucho JavaScript, este mismo portfolio lo desarrolle con React.",
+    imagen: "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
+    descripcion: "Biblioteca principal para desarrollo de interfaces dinámicas y escalables.",
   },
   {
     id: 2,
     nombre: "TypeScript",
-    imagen:
-      "https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg",
-    descripcion:
-      "Empezé a usarlo en proyectos mas grandes, me ayuda a tener un código mas limpio y mantenible, Puedo usar JavaScript, pero prefiero TypeScript.",
+    imagen: "https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg",
+    descripcion: "Superset de JavaScript que añade tipado estático para código robusto.",
   },
   {
     id: 3,
     nombre: "Node.js",
-    imagen:
-      "https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg",
-    descripcion:
-      "Aprendí a usar node luego de aprender php, me gusta su uso con Express.js para crear APIs.",
+    imagen: "https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg",
+    descripcion: "Entorno de ejecución para backend rápido y escalable.",
   },
   {
     id: 4,
     nombre: "Next.js",
-    imagen:
-      "https://upload.wikimedia.org/wikipedia/commons/8/8e/Nextjs-logo.svg",
-    descripcion:
-      "El sitio del colegio inmobiliario lo desarrollé con Next.js, me gusta su uso del server side rendering.",
+    imagen: "https://upload.wikimedia.org/wikipedia/commons/8/8e/Nextjs-logo.svg",
+    descripcion: "Framework de React para producción con SSR y optimización SEO.",
   },
   {
     id: 5,
     nombre: "Tailwind CSS",
-    imagen:
-        "https://i.ytimg.com/vi/wXGlWLQdgf4/maxresdefault.jpg",
-    descripcion:
-      "Me gusta mucho la facilidad para escribir estilos de este framework, lo estoy usando para construir este mismo portfolio.",
+    imagen: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg",
+    descripcion: "Framework de utilidad para diseño rápido y consistente.",
   },
   {
-    id:6,
-    nombre:"Bootstrap",
-    imagen:"https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg",
-    descripcion:"Lo que mas me gusta de bootstrap es la facilidad y versatilidad que tiene para crear sitios web responsive. Mis 2 grandes proyectos estan hechos con bootstrap."
+    id: 6,
+    nombre: "Bootstrap",
+    imagen: "https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg",
+    descripcion: "Framework CSS clásico para prototipado rápido y responsive.",
   },
   {
-    id:7,
-    nombre:"PHP",
-    imagen:"https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg",
-    descripcion:"Manejo php para proyectos pequeños, me gusta su facilidad para integrar con bases de datos. Y ademas fue el primer lenguaje de programación que aprendí."
+    id: 7,
+    nombre: "PHP",
+    imagen: "https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg",
+    descripcion: "Lenguaje de script del lado del servidor para integraciones legacy.",
   },
   {
-    id:8,
-    nombre:"postgreSQL",
-    imagen:"https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_elephant.svg",
-    descripcion:"PostgreSQL es la herramienta que utilizo para gestionar bases de datos, me gusta su facilidad para integrar con Node.js, pero puedo usar otros motoroes de base de datos como Mysql o MongoDB."
+    id: 8,
+    nombre: "PostgreSQL",
+    imagen: "https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_elephant.svg",
+    descripcion: "Base de datos relacional robusta y confiable.",
+  },
+  {
+    id: 9,
+    nombre: "Prompt Engineering",
+    imagen: "https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg",
+    descripcion: "Especialista en diseño de prompts para obtener los mejores resultados de LLMs.",
   }
 ];
 
 export default function Technologies() {
   return (
-    <div className="grid place-items-center text-white italic container mx-auto" id="technologies" >
-      <h1 className="text-4xl font-bold mt-8">Tecnologías</h1>
-      <div className="text-white w-full my-8">
-        <div className="mx-auto grid md:grid-cols-4 md:gap-8">
-          {tecnologias.map((carta) => {
-            return (
-              <div
-              key={carta.id}
-                style={{
-                  backgroundColor: "#FDFFFC",
-                  boxShadow: "10px 10px 15px #437C90",
-                }}
-                className="shadow-xl m-4 border flex flex-col p-4 justify-center items-center hover:scale-105 duration-300"
-              >
-                <img className={`${carta.id  === 5 ? 'w-48' : 'w-20'}`} src={carta.imagen} alt="" />
-                <h2 className="border-b font-bold text-3xl py-3 text-black italic">
-                  {carta.nombre}
-                </h2>
-                <div className="flex flex-col justify-center items-center">
-                  <p className="text-black">{carta.descripcion}</p>
-                </div>
+    <section id="technologies" className="py-20 px-4">
+      <div className="max-w-7xl mx-auto">
+        <motion.h2
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+          className="text-4xl md:text-5xl font-bold font-heading mb-16 text-center"
+        >
+          Stack <span className="text-primary">Tecnológico</span>
+        </motion.h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {tecnologias.map((tech, index) => (
+            <motion.div
+              key={tech.id}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.1, duration: 0.4 }}
+              whileHover={{ y: -5, boxShadow: "0 10px 30px -10px rgba(99, 102, 241, 0.3)" }}
+              className="glass p-6 rounded-xl flex flex-col items-center text-center group transition-all duration-300 border border-white/5 hover:border-primary/30"
+            >
+              <div className="w-16 h-16 mb-4 p-3 bg-white/5 rounded-full flex items-center justify-center group-hover:bg-white/10 transition-colors">
+                <img
+                  src={tech.imagen}
+                  alt={tech.nombre}
+                  className="w-full h-full object-contain filter drop-shadow-lg"
+                />
               </div>
-            );
-          })}
+
+              <h3 className="text-xl font-bold mb-2 text-gray-100 group-hover:text-primary transition-colors">
+                {tech.nombre}
+              </h3>
+
+              <p className="text-sm text-gray-400 leading-relaxed font-light">
+                {tech.descripcion}
+              </p>
+            </motion.div>
+          ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }
