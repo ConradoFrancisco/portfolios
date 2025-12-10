@@ -7,6 +7,7 @@ import Technologies from "./components/Technologies";
 import Abilities from "./components/Abilities";
 import MobileNavBar from "./components/MobileNavbar";
 export default function App() {
+  console.log("Portfolio v2.0 - Dark Mode Loaded");
   return (
     <div className="min-h-screen bg-dark text-gray-100 overflow-hidden relative">
       <NavBar />
