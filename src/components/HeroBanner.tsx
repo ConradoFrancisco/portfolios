@@ -8,9 +8,9 @@ export default function HeroBanner() {
     <section id="home" className="relative h-screen flex flex-col justify-center items-center overflow-hidden pt-16">
       {/* Background Blobs */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
-        <div className="absolute top-[-10%] left-[-10%] w-96 h-96 bg-primary/30 rounded-full mix-blend-screen filter blur-3xl opacity-50 animate-blob"></div>
-        <div className="absolute top-[-10%] right-[-10%] w-96 h-96 bg-secondary/30 rounded-full mix-blend-screen filter blur-3xl opacity-50 animate-blob animation-delay-2000"></div>
-        <div className="absolute bottom-[-20%] left-[20%] w-96 h-96 bg-purple-600/30 rounded-full mix-blend-screen filter blur-3xl opacity-50 animate-blob animation-delay-4000"></div>
+        <div className="absolute top-[-10%] left-[-10%] w-96 h-96 bg-primary/30 rounded-full mix-blend-screen filter blur-3xl opacity-50 animate-blob will-change-transform"></div>
+        <div className="absolute top-[-10%] right-[-10%] w-96 h-96 bg-secondary/30 rounded-full mix-blend-screen filter blur-3xl opacity-50 animate-blob animation-delay-2000 will-change-transform"></div>
+        <div className="absolute bottom-[-20%] left-[20%] w-96 h-96 bg-purple-600/30 rounded-full mix-blend-screen filter blur-3xl opacity-50 animate-blob animation-delay-4000 will-change-transform"></div>
       </div>
 
       <motion.div
@@ -28,8 +28,8 @@ export default function HeroBanner() {
             className="relative h-64 w-64 object-cover rounded-full border-4 border-dark shadow-2xl"
             alt="Conrado Llanos"
           />
-          {/* Santa Hat Overlay - Bigger and centered */}
-          <SantaHat className="absolute -top-16 -left-10 w-48 h-48 rotate-[-25deg] filter drop-shadow-lg z-20 pointer-events-none" />
+          {/* Santa Hat Overlay - Floppy & Centered */}
+          <SantaHat className="absolute -top-24 -left-12 w-56 h-56 rotate-[-15deg] filter drop-shadow-lg z-20 pointer-events-none" />
         </div>
       </motion.div>
 

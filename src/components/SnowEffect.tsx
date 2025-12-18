@@ -4,12 +4,12 @@ export default function SnowEffect() {
     const [snowflakes, setSnowflakes] = useState<{ id: number; left: string; animationDuration: string; animationDelay: string }[]>([]);
 
     useEffect(() => {
-        // Reduced count for performance
-        const count = 30;
+        // Ultra-reduced count
+        const count = 15;
         const flakes = Array.from({ length: count }).map((_, i) => ({
             id: i,
             left: `${Math.random() * 100}%`,
-            animationDuration: `${Math.random() * 5 + 10}s`, // Slow fall (10-15s)
+            animationDuration: `${Math.random() * 5 + 10}s`, // 10-15s
             animationDelay: `${Math.random() * 5}s`,
         }));
         setSnowflakes(flakes);
@@ -20,9 +20,9 @@ export default function SnowEffect() {
             <style>
                 {`
           @keyframes snowfall {
-            0% { transform: translateY(-10vh) rotate(0deg); opacity: 0; }
-            20% { opacity: 1; }
-            100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
+            0% { transform: translateY(-10vh); opacity: 0; }
+            20% { opacity: 0.8; }
+            100% { transform: translateY(110vh); opacity: 0; }
           }
           .snowflake {
             position: absolute;

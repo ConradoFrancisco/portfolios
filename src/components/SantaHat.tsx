@@ -6,31 +6,33 @@ export default function SantaHat({ className }: { className?: string }) {
             className={className}
             fill="none"
         >
-            {/* Red Part of the Hat */}
+            {/* Floppy Red Hat Body */}
             <path
-                d="M418.4 157.9c-28.8-19.1-85.3 11-137.9 33.5 -52.6 22.5-98.1 41.5-125.6 24.6 -18.4-11.3-46.7 5.6-59 28.1 36.3 35.6 102 75.6 195 44 91.5-31.1 146.6-86.6 156.9-105.6C454.5 169.9 437.5 170.6 418.4 157.9z"
+                d="M110 320c-15-20-10-60 20-90 40-40 120-60 200-40 60 15 90 60 70 110 -15 35-50 50-90 40 -40-10-60-40-50-70 10-30 40-40 70-30"
                 fill="#EF4444"
+                className="hidden" // Placeholder logic if complex path needed, simplified below
             />
+            {/* Real simplified floppy hat */}
             <path
-                d="M136.6 256c-20 18.5-27 49-27 49s46-15 97-40c49.5-24.2 103.5-54.8 132-72 -28-36-82-41-82-41 -47.1 23-100.9 85-120 104z"
-                fill="#EF4444"
-            />
-
-            {/* White Pom-Pom */}
-            <circle cx="452" cy="192" r="32" fill="#F3F4F6" />
-
-            {/* White Trim */}
-            <path
-                d="M129.5 288c-17.7 0-32-14.3-32-32 0-17.7 14.3-32 32-32s32 14.3 32 32C161.5 273.7 147.2 288 129.5 288z"
+                d="M66.6 333.5C73.8 300.2 119.3 273 175 273s101.2 27.2 108.4 60.5H66.6z"
                 fill="#F3F4F6"
             />
             <path
-                d="M100 240c0 0 20 40 180-20 0 0-40 50-180 20Z"
-                fill="#F3F4F6"
-                stroke="#F3F4F6"
-                strokeWidth="20"
+                d="M175 273c-66 0-110-50-60-150 40-80 160-80 200 40 20 60-40 110-140 110"
+                fill="#EF4444"
+            />
+            {/* White Trim (Base) */}
+            <rect x="60" y="330" width="230" height="40" rx="20" fill="#F3F4F6" />
+
+            {/* Pom Pom at the end of a flopped tip - let's make it droop to the right */}
+            <path
+                d="M315 163 c 40 40 60 100 20 150"
+                stroke="#EF4444"
+                strokeWidth="45"
                 strokeLinecap="round"
+                fill="none"
             />
+            <circle cx="340" cy="330" r="35" fill="#F3F4F6" />
         </svg>
     );
 }
