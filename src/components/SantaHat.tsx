@@ -1,38 +1,49 @@
 export default function SantaHat({ className }: { className?: string }) {
     return (
         <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 512 512"
-            className={className}
+            width="500"
+            height="500"
+            viewBox="0 0 500 500"
             fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className={className}
         >
-            {/* Floppy Red Hat Body */}
+            <defs>
+                <linearGradient
+                    id="hat_red_gradient"
+                    x1="250"
+                    y1="0"
+                    x2="250"
+                    y2="500"
+                    gradientUnits="userSpaceOnUse"
+                >
+                    <stop stopColor="#FF0000" />
+                    <stop offset="1" stopColor="#C20000" />
+                </linearGradient>
+                <radialGradient
+                    id="hat_white_gradient"
+                    cx="0"
+                    cy="0"
+                    r="1"
+                    gradientUnits="userSpaceOnUse"
+                    gradientTransform="translate(250 350) rotate(90) scale(150 250)"
+                >
+                    <stop stopColor="white" />
+                    <stop offset="1" stopColor="#EAEAEA" />
+                </radialGradient>
+            </defs>
             <path
-                d="M110 320c-15-20-10-60 20-90 40-40 120-60 200-40 60 15 90 60 70 110 -15 35-50 50-90 40 -40-10-60-40-50-70 10-30 40-40 70-30"
-                fill="#EF4444"
-                className="hidden" // Placeholder logic if complex path needed, simplified below
-            />
-            {/* Real simplified floppy hat */}
-            <path
-                d="M66.6 333.5C73.8 300.2 119.3 273 175 273s101.2 27.2 108.4 60.5H66.6z"
-                fill="#F3F4F6"
+                d="M450 250C450 388.071 338.071 500 200 500C61.9288 500 -50 388.071 -50 250C-50 111.929 61.9288 0 200 0C338.071 0 450 111.929 450 250Z"
+                fill="url(#hat_red_gradient)"
             />
             <path
-                d="M175 273c-66 0-110-50-60-150 40-80 160-80 200 40 20 60-40 110-140 110"
-                fill="#EF4444"
+                d="M480 270C480 308.66 448.66 340 410 340C371.34 340 340 308.66 340 270C340 231.34 371.34 200 410 200C448.66 200 480 231.34 480 270Z"
+                fill="url(#hat_white_gradient)"
             />
-            {/* White Trim (Base) */}
-            <rect x="60" y="330" width="230" height="40" rx="20" fill="#F3F4F6" />
-
-            {/* Pom Pom at the end of a flopped tip - let's make it droop to the right */}
             <path
-                d="M315 163 c 40 40 60 100 20 150"
-                stroke="#EF4444"
-                strokeWidth="45"
-                strokeLinecap="round"
-                fill="none"
+                d="M500 350C500 432.843 432.843 500 350 500C267.157 500 200 432.843 200 350C200 267.157 267.157 200 350 200C432.843 200 500 267.157 500 350Z"
+                fill="url(#hat_white_gradient)"
             />
-            <circle cx="340" cy="330" r="35" fill="#F3F4F6" />
         </svg>
     );
 }
