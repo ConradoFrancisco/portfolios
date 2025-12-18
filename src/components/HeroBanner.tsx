@@ -28,8 +28,8 @@ export default function HeroBanner() {
             className="relative h-64 w-64 object-cover rounded-full border-4 border-dark shadow-2xl"
             alt="Conrado Llanos"
           />
-          {/* Santa Hat Overlay */}
-          <SantaHat className="absolute -top-12 -left-8 w-32 h-32 rotate-[-25deg] filter drop-shadow-lg z-20" />
+          {/* Santa Hat Overlay - Bigger and centered */}
+          <SantaHat className="absolute -top-16 -left-10 w-48 h-48 rotate-[-25deg] filter drop-shadow-lg z-20 pointer-events-none" />
         </div>
       </motion.div>
 
