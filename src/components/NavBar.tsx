@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import foto from '../assets/1651616086895.jpeg';
 import { motion } from 'framer-motion';
-import Snowfall from 'react-snowfall'
+
 export default function NavBar() {
   const [scrolled, setScrolled] = useState(false);
 
@@ -22,7 +22,7 @@ export default function NavBar() {
 
   return (
     <>
-      <Snowfall color='white' />
+
       <motion.nav
         initial={{ y: -100 }}
         animate={{ y: 0 }}

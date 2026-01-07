@@ -1,7 +1,7 @@
 import { Typewriter } from "react-simple-typewriter";
 import foto from "../assets/1651616086895.jpeg";
 import { motion } from "framer-motion";
-import SantaHat from "./SantaHat";
+
 
 export default function HeroBanner() {
   return (
@@ -21,15 +21,15 @@ export default function HeroBanner() {
       >
         <div className="absolute -inset-1 bg-gradient-to-r from-primary to-secondary rounded-full blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
 
-        {/* Profile Image Container */}
+
         <div className="relative">
           <img
             src={foto}
             className="relative h-64 w-64 object-cover rounded-full border-4 border-dark shadow-2xl"
             alt="Conrado Llanos"
           />
-          {/* Santa Hat Overlay - Floppy & Centered */}
-          <SantaHat className="absolute -top-24 -left-12 w-56 h-56 rotate-[-15deg] filter drop-shadow-lg z-20 pointer-events-none" />
+
+
         </div>
       </motion.div>
 
